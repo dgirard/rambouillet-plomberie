@@ -1,0 +1,249 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/ui/Breadcrumbs.astro';
+import FAQAccordion from '../components/ui/FAQAccordion.astro';
+import PricingTable from '../components/ui/PricingTable.astro';
+import SidebarContact from '../components/ui/SidebarContact.astro';
+
+const breadcrumbs = [
+  { label: 'Plomberie' }
+];
+
+const services = [
+  { title: 'Rénovation salle de bain', description: 'Création et modernisation complète' },
+  { title: 'Installation sanitaires', description: 'WC, lavabo, douche, baignoire' },
+  { title: 'Pose adoucisseur d\'eau', description: 'Protection contre le calcaire' },
+  { title: 'Raccordement machine', description: 'Lave-linge, lave-vaisselle' },
+  { title: 'Création point d\'eau', description: 'Extension plomberie' },
+  { title: 'Remplacement robinetterie', description: 'Mitigeurs, mélangeurs' }
+];
+
+const whyChooseUs = [
+  {
+    icon: 'design',
+    title: 'Conseil & Design',
+    description: 'Nous vous accompagnons dans le choix des équipements et l\'agencement de votre salle de bain pour un résultat optimal.'
+  },
+  {
+    icon: 'quality',
+    title: 'Matériaux Premium',
+    description: 'Nous travaillons avec des marques reconnues : Grohe, Hansgrohe, Jacob Delafon pour une qualité durable.'
+  },
+  {
+    icon: 'clean',
+    title: 'Chantier Propre',
+    description: 'Protection de votre intérieur, nettoyage quotidien et évacuation des déchets. Vous récupérez un espace impeccable.'
+  },
+  {
+    icon: 'warranty',
+    title: 'Garantie Décennale',
+    description: 'Tous nos travaux sont couverts par notre assurance décennale pour votre tranquillité sur le long terme.'
+  }
+];
+
+const pricing = [
+  { service: 'Installation WC complet', details: 'Pose + Raccordement (hors fournitures)', price: 'dès 250€' },
+  { service: 'Pose lavabo/vasque', details: 'Installation + Robinetterie', price: 'dès 180€' },
+  { service: 'Installation douche italienne', details: 'Receveur + Paroi + Colonne', price: 'Sur devis' },
+  { service: 'Rénovation SDB complète', details: 'Dépose + Plomberie + Pose', price: 'Sur devis' },
+  { service: 'Pose adoucisseur', details: 'Installation + Mise en service', price: 'dès 350€' }
+];
+
+const faq = [
+  {
+    question: 'Combien coûte une rénovation de salle de bain ?',
+    answer: 'Le budget varie selon la surface et les équipements choisis. Pour une salle de bain de 5m², comptez entre 5 000€ et 12 000€ tout compris. Nous établissons un devis détaillé après visite gratuite.'
+  },
+  {
+    question: 'L\'adoucisseur d\'eau est-il vraiment utile ?',
+    answer: 'À Rambouillet et dans les Yvelines, l\'eau est très calcaire (30-40°F). Un adoucisseur protège vos canalisations, prolonge la vie de vos appareils et améliore le confort (peau, cheveux, linge).'
+  },
+  {
+    question: 'Puis-je rester chez moi pendant les travaux ?',
+    answer: 'Oui, nous organisons le chantier pour minimiser les nuisances. Nous prévoyons un accès WC/douche de secours si nécessaire et travaillons par zones pour préserver votre confort.'
+  },
+  {
+    question: 'Gérez-vous aussi l\'électricité et le carrelage ?',
+    answer: 'Nous coordonnons l\'ensemble des corps de métier nécessaires à votre projet. Un seul interlocuteur, une seule facture, pour une rénovation clé en main sans stress.'
+  }
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Plomberie Générale et Rénovation Salle de Bain Rambouillet",
+  "description": "Artisan plombier à Rambouillet : rénovation salle de bain, installation sanitaires, pose adoucisseur. Devis gratuit, garantie décennale.",
+  "provider": {
+    "@type": "Plumber",
+    "@id": "https://www.rambouillet-plomberie.fr/#organization"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Rambouillet"
+  },
+  "serviceType": "General Plumbing Service"
+};
+---
+
+<Layout
+  title="Plombier Rambouillet - Rénovation Salle de Bain & Sanitaires | Devis Gratuit"
+  description="Artisan plombier à Rambouillet : rénovation salle de bain, installation sanitaires, adoucisseur d'eau. Garantie décennale. Devis gratuit. 06 27 31 38 70"
+  schema={serviceSchema}
+>
+  <!-- Hero Section -->
+  <div class="bg-white border-b border-gray-200 pb-12 pt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Breadcrumbs items={breadcrumbs} />
+
+      <div class="flex flex-col lg:flex-row gap-12 items-start">
+        <!-- Text Content -->
+        <div class="flex-1 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100">
+            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Garantie Décennale</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+            Plomberie Générale <br class="hidden md:block" /> <span class="text-blue-600">à Rambouillet</span>
+          </h1>
+
+          <p class="text-lg text-gray-600 max-w-2xl leading-relaxed">
+            Rénovation de salle de bain, installation de sanitaires et pose d'adoucisseur. Un travail soigné avec des matériaux de qualité pour un intérieur durable.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-2">
+            <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+              <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              Garantie décennale
+            </div>
+            <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+              <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+              </svg>
+              Devis détaillé gratuit
+            </div>
+            <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+              <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
+              </svg>
+              Marques premium
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="w-full lg:w-5/12">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-video lg:aspect-[4/3] bg-gray-100">
+            <img
+              src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop"
+              alt="Salle de bain moderne rénovée"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <p class="text-sm font-semibold bg-blue-600/90 inline-block px-3 py-1 rounded mb-1">Rénovation terminée</p>
+              <p class="text-xs opacity-90">Salle de bain complète réalisée à Rambouillet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <!-- Left Column (Main Content) -->
+      <div class="lg:col-span-8 space-y-16">
+        <!-- Services -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <span class="w-8 h-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </span>
+            Nos services plomberie
+          </h2>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <p class="mb-6 text-gray-600">De la petite réparation à la rénovation complète, nous réalisons tous vos projets de plomberie avec soin.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
+              {services.map((item) => (
+                <div class="flex gap-x-3 items-start p-2 rounded hover:bg-gray-50 transition-colors">
+                  <div class="flex items-center">
+                    <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div class="text-sm leading-6">
+                    <span class="font-medium text-gray-900">{item.title}</span>
+                    <p class="text-gray-500 text-xs">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Pourquoi nous choisir ?</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {whyChooseUs.map((item) => (
+              <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                  {item.icon === 'design' && (
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                    </svg>
+                  )}
+                  {item.icon === 'quality' && (
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                    </svg>
+                  )}
+                  {item.icon === 'clean' && (
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                    </svg>
+                  )}
+                  {item.icon === 'warranty' && (
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                  )}
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                <p class="text-sm text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- Pricing Table -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Tarifs Indicatifs</h2>
+          <PricingTable items={pricing} />
+        </section>
+
+        <!-- FAQ -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Questions Fréquentes</h2>
+          <FAQAccordion items={faq} />
+        </section>
+      </div>
+
+      <!-- Right Column (Sticky Sidebar) -->
+      <div class="lg:col-span-4">
+        <SidebarContact />
+      </div>
+    </div>
+  </div>
+</Layout>

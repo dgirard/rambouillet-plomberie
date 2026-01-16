@@ -1,0 +1,122 @@
+---
+const services = [
+  {
+    icon: 'alert',
+    iconBg: 'bg-red-100',
+    iconColor: 'text-red-600',
+    title: 'Urgences 24/7',
+    description: 'Fuites d\'eau, débouchage de canalisation, chauffe-eau en panne. Intervention immédiate pour limiter les dégâts.',
+    features: ['Recherche de fuite', 'Débouchage WC', 'Réparation robinetterie'],
+    href: '/urgences',
+    color: 'red'
+  },
+  {
+    icon: 'fire',
+    iconBg: 'bg-orange-100',
+    iconColor: 'text-orange-600',
+    title: 'Chauffage',
+    description: 'Installation, entretien et dépannage de chaudières gaz et fioul. Optimisez votre confort thermique.',
+    features: ['Entretien annuel', 'Remplacement chaudière', 'Désembouage'],
+    href: '/chauffage',
+    color: 'orange'
+  },
+  {
+    icon: 'wrench',
+    iconBg: 'bg-blue-100',
+    iconColor: 'text-blue-600',
+    title: 'Plomberie Générale',
+    description: 'Installation sanitaire et rénovation de salle de bain. Des travaux soignés pour un intérieur durable.',
+    features: ['Rénovation Salle de Bain', 'Pose adoucisseur', 'Raccordements'],
+    href: '/plomberie',
+    color: 'blue'
+  }
+];
+---
+
+<section class="py-16 lg:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-12 lg:mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Nos Services Experts
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Nous couvrons tous vos besoins en plomberie et chauffage, de l'urgence à la rénovation complète.
+      </p>
+    </div>
+
+    <!-- WhatsApp floating button -->
+    <div class="fixed bottom-24 lg:bottom-8 right-4 z-40">
+      <a
+        href="https://wa.me/33627313870?text=Bonjour%2C%20j%27ai%20besoin%20d%27un%20plombier"
+        target="_blank"
+        rel="noopener"
+        class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-lg shadow-green-500/30 transition-all hover:scale-110"
+        aria-label="Contacter via WhatsApp"
+      >
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {services.map((service) => (
+        <article class="group bg-white border border-gray-200 rounded-2xl p-6 lg:p-8 hover:shadow-xl hover:border-gray-300 transition-all duration-300">
+          <!-- Icon -->
+          <div class={`w-14 h-14 ${service.iconBg} rounded-xl flex items-center justify-center mb-6`}>
+            {service.icon === 'alert' && (
+              <svg class={`w-7 h-7 ${service.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+              </svg>
+            )}
+            {service.icon === 'fire' && (
+              <svg class={`w-7 h-7 ${service.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
+              </svg>
+            )}
+            {service.icon === 'wrench' && (
+              <svg class={`w-7 h-7 ${service.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            )}
+          </div>
+
+          <!-- Content -->
+          <h3 class="text-xl font-bold text-gray-900 mb-3">
+            {service.title}
+          </h3>
+          <p class="text-gray-600 mb-6">
+            {service.description}
+          </p>
+
+          <!-- Features -->
+          <ul class="space-y-2 mb-6">
+            {service.features.map((feature) => (
+              <li class="flex items-center gap-2 text-sm text-gray-600">
+                <svg class={`w-4 h-4 ${service.iconColor}`} fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+
+          <!-- Link -->
+          <a
+            href={service.href}
+            class={`inline-flex items-center gap-1 font-semibold ${service.iconColor} hover:gap-2 transition-all`}
+          >
+            En savoir plus
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

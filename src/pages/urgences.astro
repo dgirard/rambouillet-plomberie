@@ -1,0 +1,243 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumbs from '../components/ui/Breadcrumbs.astro';
+import FAQAccordion from '../components/ui/FAQAccordion.astro';
+import PricingTable from '../components/ui/PricingTable.astro';
+import SidebarContact from '../components/ui/SidebarContact.astro';
+
+const breadcrumbs = [
+  { label: 'Urgences' }
+];
+
+const interventions = [
+  { title: 'Fuite sous évier ou lavabo', description: 'Siphon, joints, flexibles' },
+  { title: 'Fuite WC et chasse d\'eau', description: 'Mécanisme, robinet d\'arrêt' },
+  { title: 'Fuite tuyauterie visible', description: 'Cuivre, PER, Multicouche' },
+  { title: 'Fuite encastrée', description: 'Recherche non-destructive' },
+  { title: 'Fuite chauffe-eau', description: 'Groupe de sécurité, ballon' },
+  { title: 'Rupture canalisation', description: 'Arrivée d\'eau principale' }
+];
+
+const whyChooseUs = [
+  {
+    icon: 'clock',
+    title: 'Disponibilité 24/7',
+    description: 'Une urgence n\'attend pas. Nos équipes sont prêtes à intervenir jour et nuit, week-ends et jours fériés.'
+  },
+  {
+    icon: 'search',
+    title: 'Détection Non-Destructive',
+    description: 'Utilisation de caméras thermiques et détecteurs acoustiques pour localiser la fuite sans casser vos murs.'
+  },
+  {
+    icon: 'shield',
+    title: 'Agréé Assurances',
+    description: 'Nos factures et rapports sont conformes aux exigences des assureurs pour faciliter vos remboursements.'
+  },
+  {
+    icon: 'check',
+    title: 'Garantie Pièces & MO',
+    description: 'Toutes nos réparations sont garanties 1 an pièces et main d\'œuvre pour votre tranquillité.'
+  }
+];
+
+const pricing = [
+  { service: 'Recherche de fuite simple', details: 'Déplacement + Diagnostic visuel + Rapport', price: '120€' },
+  { service: 'Réparation fuite standard', details: 'Remplacement joint/raccord (hors pièces)', price: 'dès 149€' },
+  { service: 'Forfait Recherche Technique', details: 'Caméra thermique / Gaz traceur', price: 'Sur devis' },
+  { service: 'Majoration Nuit / WE', details: 'Intervention après 20h ou week-end', price: '+50%', isUrgent: true }
+];
+
+const faq = [
+  {
+    question: 'Comment couper l\'eau en attendant le plombier ?',
+    answer: 'Localisez votre compteur d\'eau ou le robinet d\'arrêt général, souvent situé dans l\'entrée, la cuisine (sous l\'évier), ou le garage. Tournez le robinet dans le sens des aiguilles d\'une montre pour fermer l\'arrivée d\'eau.'
+  },
+  {
+    question: 'Mon assurance couvre-t-elle la recherche de fuite ?',
+    answer: 'Dans la majorité des contrats multirisques habitation, les frais de recherche de fuite sont pris en charge. Nous vous fournissons un rapport détaillé pour faciliter vos démarches auprès de votre assureur.'
+  },
+  {
+    question: 'Quel est le délai d\'intervention ?',
+    answer: 'Pour les urgences "Fuite d\'eau", nous nous engageons à intervenir sous 30 minutes à Rambouillet et dans un rayon de 20km.'
+  }
+];
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Dépannage Urgence Plomberie Rambouillet",
+  "description": "Intervention rapide en 30 minutes pour fuites d'eau, débouchage et pannes. Artisan plombier agréé assurances à Rambouillet et Yvelines.",
+  "provider": {
+    "@type": "Plumber",
+    "@id": "https://www.rambouillet-plomberie.fr/#organization"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Rambouillet"
+  },
+  "serviceType": "Emergency Plumbing Service"
+};
+---
+
+<Layout
+  title="Urgence Plomberie Rambouillet - Fuite d'Eau 24/7 | Intervention 30min"
+  description="Urgence fuite d'eau à Rambouillet ? Intervention en 30 minutes, 24h/24, 7j/7. Artisan plombier agréé assurances. Recherche de fuite non-destructive. Appelez le 06 27 31 38 70"
+  schema={serviceSchema}
+>
+  <!-- Hero Section -->
+  <div class="bg-white border-b border-gray-200 pb-12 pt-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Breadcrumbs items={breadcrumbs} />
+
+      <div class="flex flex-col lg:flex-row gap-12 items-start">
+        <!-- Text Content -->
+        <div class="flex-1 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-50 border border-red-100">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-600 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
+            </span>
+            <span class="text-xs font-bold text-red-600 uppercase tracking-wider">Urgence 24/7 Disponible</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight leading-tight">
+            Réparation Fuite d'Eau <br class="hidden md:block" /> <span class="text-blue-600">à Rambouillet</span>
+          </h1>
+
+          <p class="text-lg text-gray-600 max-w-2xl leading-relaxed">
+            Intervention rapide en 30 minutes. Nos artisans plombiers sont agréés toutes assurances pour la recherche et la réparation de fuites, visibles ou encastrées.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-2">
+            <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+              <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              Agréé Assurances
+            </div>
+            <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+              <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+              </svg>
+              Intervention 30 min
+            </div>
+            <div class="flex items-center gap-2 text-sm font-medium text-gray-700">
+              <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+              </svg>
+              Devis gratuit
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="w-full lg:w-5/12">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-video lg:aspect-[4/3] bg-gray-100">
+            <img
+              src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=800&h=600&fit=crop"
+              alt="Plombier réparant une fuite d'eau"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+              <p class="text-sm font-semibold bg-blue-600/90 inline-block px-3 py-1 rounded mb-1">Intervention en cours</p>
+              <p class="text-xs opacity-90">Nos experts utilisent des équipements de détection non-destructifs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <!-- Left Column (Main Content) -->
+      <div class="lg:col-span-8 space-y-16">
+        <!-- Intervention Types -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <span class="w-8 h-8 rounded bg-blue-100 text-blue-600 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+              </svg>
+            </span>
+            Types d'interventions
+          </h2>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+            <p class="mb-6 text-gray-600">Nous intervenons sur tous types de fuites d'eau, qu'elles soient visibles ou cachées, dans votre habitat ou local commercial.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
+              {interventions.map((item) => (
+                <div class="flex gap-x-3 items-start p-2 rounded hover:bg-gray-50 transition-colors">
+                  <div class="flex items-center">
+                    <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div class="text-sm leading-6">
+                    <span class="font-medium text-gray-900">{item.title}</span>
+                    <p class="text-gray-500 text-xs">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Pourquoi nous choisir ?</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {whyChooseUs.map((item) => (
+              <div class="p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-shadow">
+                <div class="w-12 h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                  {item.icon === 'clock' && (
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  )}
+                  {item.icon === 'search' && (
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                  )}
+                  {item.icon === 'shield' && (
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                  )}
+                  {item.icon === 'check' && (
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                    </svg>
+                  )}
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                <p class="text-sm text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- Pricing Table -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Tarifs Transparents</h2>
+          <PricingTable items={pricing} />
+        </section>
+
+        <!-- FAQ -->
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Questions Fréquentes</h2>
+          <FAQAccordion items={faq} />
+        </section>
+      </div>
+
+      <!-- Right Column (Sticky Sidebar) -->
+      <div class="lg:col-span-4">
+        <SidebarContact />
+      </div>
+    </div>
+  </div>
+</Layout>

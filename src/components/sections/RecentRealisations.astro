@@ -1,0 +1,92 @@
+---
+// Sample realisations data - will be replaced with content collection later
+const realisations = [
+  {
+    title: 'Salle de bain complète',
+    category: 'Rénovation',
+    categoryColor: 'bg-purple-100 text-purple-700',
+    location: 'Rambouillet',
+    image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&h=400&fit=crop',
+    href: '/realisations/salle-de-bain-complete'
+  },
+  {
+    title: 'Installation Chaudière HPE',
+    category: 'Chauffage',
+    categoryColor: 'bg-orange-100 text-orange-700',
+    location: 'Gazeran',
+    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=400&fit=crop',
+    href: '/realisations/installation-chaudiere-hpe'
+  },
+  {
+    title: 'Remplacement tuyauterie',
+    category: 'Dépannage',
+    categoryColor: 'bg-red-100 text-red-700',
+    location: 'Le Perray',
+    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop',
+    href: '/realisations/remplacement-tuyauterie'
+  }
+];
+---
+
+<section class="py-16 lg:py-24 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+      <div>
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
+          Nos Réalisations
+        </h2>
+        <p class="text-gray-600">
+          Découvrez la qualité de notre travail chez vos voisins à Rambouillet
+        </p>
+      </div>
+      <a
+        href="/realisations"
+        class="inline-flex items-center gap-1 text-blue-600 font-semibold hover:gap-2 transition-all"
+      >
+        Voir tout le portfolio
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {realisations.map((realisation) => (
+        <a href={realisation.href} class="group block">
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+            <!-- Image -->
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img
+                src={realisation.image}
+                alt={realisation.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div class="absolute top-4 left-4">
+                <span class={`px-3 py-1 rounded-full text-xs font-semibold ${realisation.categoryColor}`}>
+                  {realisation.category}
+                </span>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="p-5">
+              <h3 class="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                {realisation.title}
+              </h3>
+              <div class="flex items-center gap-1 text-sm text-gray-500">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                {realisation.location}
+              </div>
+            </div>
+          </article>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

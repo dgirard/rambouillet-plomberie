@@ -1,0 +1,81 @@
+---
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+import StickyBottomBar from '../components/global/StickyBottomBar.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  schema?: object;
+  noIndex?: boolean;
+}
+
+const { title, description, schema, noIndex = false } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    {noIndex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- GEO Meta Tags -->
+    <meta name="geo.region" content="FR-78" />
+    <meta name="geo.placename" content="Rambouillet, Yvelines" />
+    <meta name="geo.position" content="48.6439;1.8308" />
+    <meta name="ICBM" content="48.6439, 1.8308" />
+
+    <!-- Additional SEO -->
+    <meta name="author" content="Plomberie Rambouillet Services" />
+    <meta name="language" content="French" />
+    <meta name="revisit-after" content="7 days" />
+
+    <title>{title}</title>
+
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Plomberie Rambouillet" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Schema.org JSON-LD -->
+    {schema && (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    )}
+  </head>
+  <body class="min-h-screen flex flex-col bg-white text-gray-900 antialiased">
+    <a href="#main-content" class="skip-link">
+      Aller au contenu principal
+    </a>
+
+    <Header />
+
+    <main id="main-content" class="flex-1">
+      <slot />
+    </main>
+
+    <Footer />
+    <StickyBottomBar />
+  </body>
+</html>

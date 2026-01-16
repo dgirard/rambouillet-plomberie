@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/sections/Hero.astro';
+import TrustBar from '../components/sections/TrustBar.astro';
+import ServiceGrid from '../components/sections/ServiceGrid.astro';
+import RecentRealisations from '../components/sections/RecentRealisations.astro';
+import Reviews from '../components/sections/Reviews.astro';
+import CTASection from '../components/sections/CTASection.astro';
+
+const plumberSchema = {
+  "@context": "https://schema.org",
+  "@type": "Plumber",
+  "@id": "https://www.rambouillet-plomberie.fr/#organization",
+  "name": "Plomberie Rambouillet Services",
+  "alternateName": "Plombier Rambouillet",
+  "description": "Artisan plombier chauffagiste à Rambouillet et Yvelines (78). Dépannage urgence 24/7, entretien chaudière, rénovation salle de bain. Intervention rapide sous 30 minutes.",
+  "url": "https://www.rambouillet-plomberie.fr",
+  "telephone": "+33627313870",
+  "email": "S.depannage.plomberie@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rambouillet",
+    "postalCode": "78120",
+    "addressRegion": "Île-de-France",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.6439,
+    "longitude": 1.8330
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Rambouillet",
+      "sameAs": "https://fr.wikipedia.org/wiki/Rambouillet"
+    },
+    { "@type": "City", "name": "Gazeran" },
+    { "@type": "City", "name": "Le Perray-en-Yvelines" },
+    { "@type": "City", "name": "Sonchamp" },
+    { "@type": "City", "name": "Clairefontaine-en-Yvelines" }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59",
+      "description": "Urgences 24h/24, 7j/7"
+    }
+  ],
+  "priceRange": "€€",
+  "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer", "Check"],
+  "currenciesAccepted": "EUR",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de plomberie",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dépannage plomberie urgence",
+          "description": "Intervention rapide pour fuites d'eau, débouchage, pannes"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Entretien et installation chaudière",
+          "description": "Installation, entretien annuel et dépannage de chaudières"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation salle de bain",
+          "description": "Rénovation complète de salles de bain"
+        }
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "150",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.snapchat.com/add/souleydepannage"
+  ]
+};
+---
+
+<Layout
+  title="Plombier Rambouillet (78) - Dépannage Urgence 24/7 | Plomberie Rambouillet"
+  description="Artisan plombier chauffagiste à Rambouillet. Urgence fuite d'eau, entretien chaudière, adoucisseur. Intervention sous 30min. Devis gratuit. Appelez le 06 27 31 38 70"
+  schema={plumberSchema}
+>
+  <Hero />
+  <TrustBar />
+  <ServiceGrid />
+  <RecentRealisations />
+  <Reviews />
+  <CTASection />
+</Layout>

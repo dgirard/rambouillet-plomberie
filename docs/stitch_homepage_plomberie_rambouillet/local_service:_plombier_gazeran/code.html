@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Plombier Gazeran | Dépannage Urgence 24/7</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Noto+Sans:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2463eb",
+                        "primary-dark": "#1d4ed8",
+                        "secondary": "#4d6599",
+                        "emergency": "#dc2626", // Red for urgency
+                        "whatsapp": "#25D366", // Green for WhatsApp
+                        "background-light": "#f9fafb",
+                        "background-dark": "#1c1f22",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2a2d31",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#374151",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                    boxShadow: {
+                        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                        'hover': '0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .icon-filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 flex flex-col min-h-screen overflow-x-hidden transition-colors duration-300">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo -->
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary dark:text-white dark:bg-primary">
+<span class="material-symbols-outlined icon-filled">plumbing</span>
+</div>
+<div class="flex flex-col">
+<h1 class="text-lg font-extrabold tracking-tight leading-none text-slate-900 dark:text-white">Plomberie Rambouillet</h1>
+<span class="text-xs font-medium text-secondary dark:text-slate-400">Antenne de Gazeran (78125)</span>
+</div>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Tarifs</a>
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Zones d'intervention</a>
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Avis</a>
+</nav>
+<!-- CTA -->
+<div class="hidden md:flex items-center gap-4">
+<a class="group flex items-center gap-2 px-5 py-2.5 bg-emergency text-white rounded-lg font-bold shadow-soft hover:shadow-hover hover:bg-red-700 transition-all transform hover:-translate-y-0.5" href="tel:01XXXXXXXX">
+<span class="material-symbols-outlined text-[20px] animate-pulse">phone_in_talk</span>
+<span>Urgence 24/7</span>
+</a>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden p-2 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pt-12 pb-20 lg:pt-24 lg:pb-32 bg-background-light dark:bg-background-dark overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+<!-- Text Content -->
+<div class="flex flex-col gap-6 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 w-fit mx-auto lg:mx-0">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-xs font-bold text-primary dark:text-blue-300 uppercase tracking-wide">Disponible immédiatement sur Gazeran</span>
+</div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-slate-900 dark:text-white leading-[1.1]">
+                            Plombier Gazeran : <br/>
+<span class="text-primary">Dépannage en 25 min</span>
+</h1>
+<p class="text-lg text-secondary dark:text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                            Une fuite d'eau ? Un chauffe-eau en panne ? Notre équipe d'artisans locaux intervient chez vous à Gazeran en moins de 30 minutes. Tarifs agréés assurances.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+<a class="flex items-center justify-center gap-3 px-8 py-4 bg-emergency text-white rounded-xl font-bold text-lg shadow-lg hover:bg-red-700 transition-all transform hover:-translate-y-1 w-full sm:w-auto" href="tel:01XXXXXXXX">
+<span class="material-symbols-outlined">call</span>
+                                Appeler 01 34 XX XX XX
+                            </a>
+<a class="flex items-center justify-center gap-3 px-8 py-4 bg-whatsapp text-white rounded-xl font-bold text-lg shadow-lg hover:bg-green-600 transition-all transform hover:-translate-y-1 w-full sm:w-auto" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+                                Devis WhatsApp
+                            </a>
+</div>
+<div class="flex items-center justify-center lg:justify-start gap-6 pt-4 text-sm text-secondary dark:text-slate-500 font-medium">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400" style="font-size: 20px;">check_circle</span>
+<span>Devis Gratuit</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400" style="font-size: 20px;">check_circle</span>
+<span>Agréé Assurances</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-green-600 dark:text-green-400" style="font-size: 20px;">check_circle</span>
+<span>Artisan Local</span>
+</div>
+</div>
+</div>
+<!-- Hero Image -->
+<div class="relative">
+<div class="absolute -inset-4 bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl blur-2xl opacity-70"></div>
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+<!-- Image container with aspect ratio -->
+<div class="aspect-[4/3] w-full bg-slate-200">
+<div class="w-full h-full bg-cover bg-center" data-alt="Plombier professionnel souriant avec caisse à outils devant une camionnette bleue" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDf9Gs5uQaBGkbB5pnqzCtb1MTptLAJjYAdjqsRJ0_usWRbJR0KL_PIOkIiYZ9d9vaqINV2FNsCx5ubTcOir3Paa4apMCbHK6coVtn9943MPCidLEOMShHQWU6Wgc_5VI0oqw6Um3ceCkX2Wka4uQSLkqkoLZ-9LzFXQA8fYPWTGNxdS2JMJ3qGvnkzITZ7EKVGTVOrsrER6ne2NzoycsmY-tghvhUXPDIsdWIt2QeW7UEzVe_KgItGvqhvTkMQLdUj_3PjEa2h');"></div>
+</div>
+<!-- Floating Badge -->
+<div class="absolute bottom-6 left-6 right-6 bg-white/95 dark:bg-surface-dark/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-border-light dark:border-border-dark flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined">star</span>
+</div>
+<div>
+<p class="font-bold text-slate-900 dark:text-white leading-tight">4.9/5 Excellent</p>
+<p class="text-xs text-secondary dark:text-slate-400">Basé sur 120+ avis locaux</p>
+</div>
+</div>
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-surface-dark bg-slate-200 bg-cover bg-center" data-alt="Photo de profil client satisfait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCN2qoe0yf_-heNG2q2Y58IW_7L6oGHkYKD2byhSMz0C-M6t6vae0fIUN0-vJanwdcRDvaZFvldMGFRUDf-7BsuF5YUu4YgPnTeiCZ46V0o-CLN4Sk4w7ED7pujjLy3glidspRZvEC2Tsb-e1JZzzMkQ9dB6vd86JxHA27ed8cAhz0KRAXDJQJz9xEp2TBKxInRmsABAI5ibQQzTWFqDbJSoJz5TGggc0sS8BwoCkAbImBIHla-afYECwdmmLSrLM1Uu5YTXBXJ')"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-surface-dark bg-slate-200 bg-cover bg-center" data-alt="Photo de profil cliente satisfaite" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4rygCTlaenIfCTSYXcOofAqsKqYmZAftl3X_yS_X81cuvzrapeenhwl9RKCmHny_Bn7WBwSazz0vuNaiFIVO-R2zG3U_R5TCVo7AOdgCGu_WHtvlGAYlnsus2heHuSwP75JWKeWTVlUWvtGu6IHMEA6zwKZY26E3BTePotu7GIk684I73zDCmr0idc4AwHftjaJSpudDctDhd4eYoG5n2-RVV9T7UVoIktjJTebFBvAUAvtJopz2F4aLzlqSjfy-itCi4l1E9')"></div>
+<div class="w-8 h-8 rounded-full border-2 border-white dark:border-surface-dark bg-slate-200 bg-cover bg-center" data-alt="Photo de profil client satisfait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKeu4xiaHuX-Weix8PJBfz9xdXzKdwEdM-Zy_8EH5mqxozmSEHUTy8-BawmwX_7CTylRcJ-9NzAsTjRKFdVJ08SpYeMcMAE0lA_PqbvmyrQ_dNgLT0aRkAXEQGum3fJJDmOv9apSYdJjSikdQGiPhji7lKMdv7xEVBaoNgFzGQd0CVSvU31mfUu_y886whpqaP3WxoNGMM2GBX-X8cph4r2_REqTxbMcYb99plBLkyQcKGE6JJC6YCCa-0-ElStMmtvREjMG2e')"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats / Trust Bar -->
+<section class="border-y border-border-light dark:border-border-dark bg-white dark:bg-surface-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex items-start gap-4 p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="p-3 bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-400 rounded-lg">
+<span class="material-symbols-outlined text-[32px]">location_on</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Artisan 100% Gazeran</h3>
+<p class="text-sm text-secondary dark:text-slate-400 mt-1">Basés rue de la Gare, nous connaissons chaque quartier.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="p-3 bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-400 rounded-lg">
+<span class="material-symbols-outlined text-[32px]">euro_symbol</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Tarifs Transparents</h3>
+<p class="text-sm text-secondary dark:text-slate-400 mt-1">Aucune surprise : devis annoncé et validé avant travaux.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="p-3 bg-blue-50 dark:bg-blue-900/20 text-primary dark:text-blue-400 rounded-lg">
+<span class="material-symbols-outlined text-[32px]">verified_user</span>
+</div>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Garantie Décennale</h3>
+<p class="text-sm text-secondary dark:text-slate-400 mt-1">Toutes nos interventions sont couvertes et garanties.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4">Nos Interventions à Gazeran</h2>
+<p class="text-secondary dark:text-slate-400 text-lg">Nous traitons toutes les urgences de plomberie et chauffage, du simple joint à la rénovation complète.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 shadow-soft hover:shadow-hover transition-all duration-300 border border-border-light dark:border-border-dark flex flex-col">
+<div class="h-48 w-full rounded-xl overflow-hidden mb-6 relative">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+<div class="w-full h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="Réparation de fuite d'eau sous évier" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhwrCEx-OkbcRUo2Rpr1HZDz6g-EqvE2CJMg0mB5fLjrhYC8BH2Va1jIwQfQncHDWUMNWz5j4nOWbp3rv7gDAA77hZQDG5KB3Gql2ZsflMrP0FkIK01UTirJeoI9IAAgFCO8UWU0wOB7P1k4KwliNQdqvM9EUpWd3yNJsZyp2oGiAnN1WjyVbFb0_aaNN0pT6Wm2h1n2qym6Z8glxdjYu-02yv_ZTMn6_TYSOJ3GWj3PV7747qsbLpob7dyWfbnn9Fyy3oxQ83');"></div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary">water_drop</span>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Recherche de Fuite</h3>
+</div>
+<p class="text-secondary dark:text-slate-400 text-sm mb-6 flex-grow">Détection précise sans casse grâce à nos caméras thermiques. Intervention rapide pour limiter les dégâts des eaux.</p>
+<a class="inline-flex items-center text-primary font-bold text-sm hover:underline mt-auto" href="#">
+                            En savoir plus <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 shadow-soft hover:shadow-hover transition-all duration-300 border border-border-light dark:border-border-dark flex flex-col">
+<div class="h-48 w-full rounded-xl overflow-hidden mb-6 relative">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+<div class="w-full h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="Débouchage de canalisation avec furet professionnel" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2b-p1XXtbz05zMRfVwZyczH8eKpY9r_fFHCBSHyHjiIQ0qS7nv_nVtUphiMFoNSPT7ebdYqpY2tPyeKsY6K3MzWySjyphpkIqNKg1wc70XWLiWu7-J6R6ZWm3iBuZeJtsCuc6weCzTyGxJk7y_vdlh_bHgBEp_DyxXd48H0B7_bfDo6sBdkrB4lFFnVO6Q-KSy-0r-8scuemDr5-2bTsdsoOk2WBfbEJFTr4dOKZwxhY3sL3hTFaD4WjnR7_4b9SMxqtKIeFg');"></div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary">plumbing</span>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Débouchage WC &amp; Canalisation</h3>
+</div>
+<p class="text-secondary dark:text-slate-400 text-sm mb-6 flex-grow">Canalisations bouchées ? Nous intervenons avec camion pompe haute pression si nécessaire. Résultat garanti.</p>
+<a class="inline-flex items-center text-primary font-bold text-sm hover:underline mt-auto" href="#">
+                            En savoir plus <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-surface-light dark:bg-surface-dark rounded-2xl p-6 shadow-soft hover:shadow-hover transition-all duration-300 border border-border-light dark:border-border-dark flex flex-col">
+<div class="h-48 w-full rounded-xl overflow-hidden mb-6 relative">
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+<div class="w-full h-full bg-cover bg-center transform group-hover:scale-105 transition-transform duration-500" data-alt="Chauffe-eau électrique installé" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFK7w-gNv3ssyo-UH5Eem6tvBp1FLeolZiCjfdkIOy6_QEHpTHZhwFynKmpNSdLpBEk-1b5JII3_K8UZK-fhMk1jxjDmZrExUpnd9P-9Hjqe89ugygkPLPE6AuMwnzW4yscGVtY-1TeeIRleM34lETTL5d_GnDNwT405DH4x0wfBDxHt7lcoFBfiKEtjZtt3IMmoT69FDnoA0BluXbPqAEIUCvYPb--Ze__6YkX_aZ5xaigRGaAU9Jbj_uTZqLMXhZCRRickzW');"></div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary">hvac</span>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white">Chauffe-eau &amp; Chaudière</h3>
+</div>
+<p class="text-secondary dark:text-slate-400 text-sm mb-6 flex-grow">Installation, entretien et dépannage de votre ballon d'eau chaude. Remplacement de résistance et thermostat.</p>
+<a class="inline-flex items-center text-primary font-bold text-sm hover:underline mt-auto" href="#">
+                            En savoir plus <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Local Presence Section (Map & Coverage) -->
+<section class="py-20 bg-slate-50 dark:bg-[#23262a]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<!-- Text Side -->
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary uppercase tracking-wide">Zone d'intervention</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6">Plombier de proximité à Gazeran</h2>
+<p class="text-secondary dark:text-slate-400 text-lg mb-8">
+                            Notre positionnement central à Gazeran nous permet d'être sur place très rapidement. Plus besoin d'attendre un plombier venant de Versailles ou Paris.
+                        </p>
+<div class="mb-8">
+<h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Quartiers desservis :</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-md text-sm text-secondary dark:text-slate-300 shadow-sm">Centre-ville</span>
+<span class="px-3 py-1.5 bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-md text-sm text-secondary dark:text-slate-300 shadow-sm">Gare de Gazeran</span>
+<span class="px-3 py-1.5 bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-md text-sm text-secondary dark:text-slate-300 shadow-sm">Le Buisson</span>
+<span class="px-3 py-1.5 bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-md text-sm text-secondary dark:text-slate-300 shadow-sm">La Boissière</span>
+<span class="px-3 py-1.5 bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-md text-sm text-secondary dark:text-slate-300 shadow-sm">Zone d'activité Bel Air</span>
+<span class="px-3 py-1.5 bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-md text-sm text-secondary dark:text-slate-300 shadow-sm">Sauvage</span>
+</div>
+</div>
+<div class="p-6 bg-white dark:bg-surface-dark rounded-xl border border-border-light dark:border-border-dark shadow-sm">
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white">Horaires d'ouverture</h4>
+<p class="text-sm text-secondary dark:text-slate-400 mt-1">Lundi - Samedi : 08h00 - 19h00</p>
+<p class="text-sm font-bold text-emergency mt-1">Urgences : 24h/24 et 7j/7</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Visual -->
+<div class="relative h-[400px] w-full bg-slate-200 dark:bg-slate-700 rounded-2xl overflow-hidden shadow-lg border border-border-light dark:border-border-dark group">
+<!-- Simplified stylized map using background image placeholder -->
+<div class="absolute inset-0 bg-cover bg-center opacity-80 group-hover:opacity-100 transition-opacity duration-500" data-alt="Carte stylisée de la zone d'intervention à Gazeran" data-location="Plan de Gazeran" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5n2RtW9sJu_RkqjWtckPKHqtwhF4sMTCEStUQo_aWhBJNtWlumkYh-TlYUOdZqPBquEikyXZZDllMLOWKh1v52sXzYETNCKD1LAZf2sL2OVAb4yZmMT7KKLnQhX91gtUwA5rD5_yxaWrV1L8E1Lg-IS4ZGGgwRUJMDLBA9k3vUvml14Bn-sr35JlDKG9oftzst5u89DZTSGzaUnk7AWqfVpF8bjEG4O13I4-EYd3hK1kWCJPSjIceR_NFr8BMBVuzwH9XM8KN');"></div>
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+<!-- Location Pin Pulse -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+<span class="relative flex h-16 w-16">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-16 w-16 bg-primary border-4 border-white dark:border-slate-800 items-center justify-center shadow-xl">
+<span class="material-symbols-outlined text-white text-3xl">home_pin</span>
+</span>
+</span>
+</div>
+<!-- Map CTA -->
+<div class="absolute bottom-6 left-6 right-6">
+<a class="block w-full bg-white dark:bg-surface-dark text-center py-3 rounded-lg font-bold text-slate-900 dark:text-white shadow-lg hover:bg-slate-50 transition-colors" href="#">
+                                 Voir sur Google Maps
+                             </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-black text-slate-900 dark:text-white">Avis Clients Gazeran</h2>
+<p class="text-secondary dark:text-slate-400 mt-2">La satisfaction de nos voisins est notre meilleure publicité.</p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-8 md:p-12 rounded-2xl shadow-soft border border-border-light dark:border-border-dark relative">
+<div class="absolute top-8 right-12 opacity-10">
+<span class="material-symbols-outlined text-[100px] text-primary">format_quote</span>
+</div>
+<div class="flex flex-col items-center text-center gap-6 relative z-10">
+<div class="flex gap-1 text-yellow-400">
+<span class="material-symbols-outlined icon-filled">star</span>
+<span class="material-symbols-outlined icon-filled">star</span>
+<span class="material-symbols-outlined icon-filled">star</span>
+<span class="material-symbols-outlined icon-filled">star</span>
+<span class="material-symbols-outlined icon-filled">star</span>
+</div>
+<blockquote class="text-xl md:text-2xl font-medium text-slate-900 dark:text-white leading-relaxed">
+                            "J'ai appelé un dimanche soir pour une fuite importante dans ma cuisine. Le plombier était là en 20 minutes comme promis. Réparation propre et tarif très correct pour une urgence. Je recommande vivement !"
+                        </blockquote>
+<div class="flex items-center gap-4 mt-2">
+<div class="w-12 h-12 rounded-full bg-slate-200 bg-cover bg-center" data-alt="Portrait de Sophie L." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcvUE6dHO4yCNglIqcAca5ukJeRNhljdEwliMkz0CpmvPodrNC2vc4nEHABOpScigZ3lEPWrKWZstckKfwVNXUNuuVqdDCK5rG2o35KMgpbpcpfVD1bDb8izjJD0CC6_G0-0Sqq0mRQvQt35Z8vw5q3pGIKnu2_L2qUmJAJsaJks2GBQwjOXy0dgpMqKQlWeCNnXGssDNKe1sErk0-iE9YWenXDpRtacM2ynL2Fz7Ttv0SLcTMO39zlYHzxVo6M3BDklkpgoIm')"></div>
+<div class="text-left">
+<div class="font-bold text-slate-900 dark:text-white">Sophie L.</div>
+<div class="text-sm text-secondary dark:text-slate-400">Résidente Centre Gazeran</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Realizations -->
+<section class="py-20 bg-white dark:bg-[#1a1d21]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
+<div>
+<h2 class="text-3xl font-black text-slate-900 dark:text-white">Réalisations Récentes</h2>
+<p class="text-secondary dark:text-slate-400 mt-2">Nos derniers chantiers autour de Gazeran et Rambouillet.</p>
+</div>
+<a class="text-primary font-bold hover:underline inline-flex items-center" href="#">
+                        Voir tout le portfolio <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Project 1 -->
+<div class="group relative overflow-hidden rounded-xl aspect-[4/3] bg-slate-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Rénovation complète salle de bain moderne" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxMPXaPODtMndoD3K-lffAZ8RMXqDH46pJpcc2yXnGVLMvsm0FAgrmEoK5p6uyKOVU5mDdjuirWq2MHAcpQh5bMKW5TOK3g219scTeToCqi7lZGFStTvvwtXYDHY8EpTKGtLVknJSLodgNOh8DWZTCGzqVSEmlNnp-UhpRqOT92A_ijiyVLTRLCeXOuGWrOU23LK-Cpj1-xUMhEmaT40633Gmf9BLp2neCcoswFSap1Cxrh6U1D7zn4vZCT76ADS9Vf-dTGx2O');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+<p class="text-xs font-bold text-primary mb-1 uppercase tracking-wider">Rénovation</p>
+<h3 class="text-white font-bold text-lg">Salle de bain complète - Rue de la Gare</h3>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative overflow-hidden rounded-xl aspect-[4/3] bg-slate-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Installation nouvelle chaudière murale" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9kV5Wr4XHSTV__uHJuaV5_efRqU-3xclnHE-dnCkWekCU7UDZm-UnoqENX9YFsdfuusk36vrg3yAE38TxyuBEtNvQoiKZzaZoxi5xsIImURKHYV0zMxTMBZ85-QZ4QKPq7jelk1W0ukRh8LTEurrALNaKulkjph2CQ5bts492oC15SZroLFcbW_mmGp69zhpo0SGw4-3nzcXlUKTjf6bH7JJ8_YX7txgsU4yTobKNFsu-_TYepBi0nzYsfg4x0khn5t-QYb-l');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+<p class="text-xs font-bold text-primary mb-1 uppercase tracking-wider">Chauffage</p>
+<h3 class="text-white font-bold text-lg">Remplacement Chaudière - Le Buisson</h3>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative overflow-hidden rounded-xl aspect-[4/3] bg-slate-100">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Réparation tuyauterie cuivre" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAx61GebyNp1AqXFNU3oP25MUWyvoF39xs52cEJc0N8Rq1W7x81-NcF-V1Lyjpa61w4cpPd_eNOo2CcaiH0bZ_dGdj9Ji0wITIg6HMQE14mcfk8SUuiWY05reCg6Eay7VzzTcfJr5WRFRNyjluZypj9Na9LvBh6nFNuDTETLcWgxIwfAPXHbvUDpSLaTXhKgQzW8nTiCNsLDjZTIjmG3ZBXHdUGDnd-tuEe0UZqjdbaLbLvgyJv_iswW2OT-N50oZ7cz2iym_u5');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-0 left-0 p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+<p class="text-xs font-bold text-primary mb-1 uppercase tracking-wider">Dépannage</p>
+<h3 class="text-white font-bold text-lg">Soudure fuite cuivre - La Boissière</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="bg-primary dark:bg-primary-dark py-16">
+<div class="max-w-4xl mx-auto px-4 text-center">
+<h2 class="text-3xl md:text-4xl font-black text-white mb-6">Besoin d'un plombier maintenant ?</h2>
+<p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">Ne laissez pas une petite fuite devenir un dégât des eaux majeur. Notre équipe est prête à intervenir.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="flex items-center justify-center gap-3 px-8 py-4 bg-white text-primary rounded-xl font-bold text-lg shadow-lg hover:bg-slate-100 transition-all" href="tel:01XXXXXXXX">
+<span class="material-symbols-outlined">call</span>
+                        Appeler le 01 34 XX XX XX
+                    </a>
+<a class="flex items-center justify-center gap-3 px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-bold text-lg hover:bg-white/10 transition-all" href="#">
+                        Demander un rappel
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<!-- Brand -->
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">plumbing</span>
+<span class="text-lg font-bold text-slate-900 dark:text-white">Plomberie Rambouillet</span>
+</div>
+<p class="text-sm text-secondary dark:text-slate-400 mb-6">
+                        Votre expert plomberie de confiance à Gazeran et ses environs. Intervention rapide, travail soigné et tarifs honnêtes.
+                    </p>
+<div class="flex gap-4">
+<a class="text-secondary dark:text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-secondary dark:text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<!-- Links -->
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Services</h4>
+<ul class="space-y-3 text-sm text-secondary dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Recherche de fuite</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Débouchage canalisation</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Chauffe-eau électrique</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Rénovation Salle de bain</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Plomberie cuisine</a></li>
+</ul>
+</div>
+<!-- Locations -->
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Zones d'intervention</h4>
+<ul class="space-y-3 text-sm text-secondary dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Plombier Rambouillet</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Plombier Gazeran</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Plombier Épernon</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Plombier Saint-Arnoult</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-4">Contact</h4>
+<ul class="space-y-3 text-sm text-secondary dark:text-slate-400">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
+<span>XX Rue de la Gare,<br/>78125 Gazeran</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">call</span>
+<span>01 34 XX XX XX</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg">mail</span>
+<span>contact@plomberie-rambouillet.fr</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-border-light dark:border-border-dark pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-secondary dark:text-slate-500">© 2024 Plomberie Rambouillet Services. Tous droits réservés.</p>
+<div class="flex gap-6 text-sm text-secondary dark:text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Mentions Légales</a>
+<a class="hover:text-primary transition-colors" href="#">Confidentialité</a>
+<a class="hover:text-primary transition-colors" href="#">Plan du site</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Sticky Mobile CTA -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-white dark:bg-surface-dark border-t border-border-light dark:border-border-dark md:hidden z-40 flex gap-3 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+<a class="flex-1 flex items-center justify-center gap-2 py-3 bg-emergency text-white rounded-lg font-bold shadow-md" href="tel:01XXXXXXXX">
+<span class="material-symbols-outlined text-xl">call</span> Appeler
+        </a>
+<a class="flex items-center justify-center w-14 rounded-lg bg-whatsapp text-white font-bold shadow-md" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+</a>
+</div>
+</body></html>
