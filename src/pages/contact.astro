@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Breadcrumbs from '../components/ui/Breadcrumbs.astro';
+import OpenStreetMap from '../components/ui/OpenStreetMap.astro';
 
 const breadcrumbs = [
   { label: 'Contact' }
@@ -167,24 +168,9 @@ const contactSchema = {
               </div>
             </div>
 
-            <!-- Map Preview -->
-            <div class="relative h-48 w-full overflow-hidden rounded-xl border border-gray-200 group cursor-pointer bg-gray-100">
-              <div class="absolute inset-0 flex items-center justify-center bg-black/10 transition-colors group-hover:bg-black/20 z-10">
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=Rambouillet+78120+France"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="rounded-full bg-white px-4 py-2 text-xs font-bold text-gray-900 shadow-lg hover:bg-gray-50 transition-colors"
-                >
-                  Voir sur la carte
-                </a>
-              </div>
-              <img
-                src="https://maps.googleapis.com/maps/api/staticmap?center=Rambouillet,France&zoom=12&size=400x200&maptype=roadmap&key=&style=feature:all|saturation:-100"
-                alt="Carte de Rambouillet - Zone d'intervention"
-                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale-[30%]"
-                loading="lazy"
-              />
+            <!-- Map OpenStreetMap -->
+            <div class="h-48 w-full overflow-hidden rounded-xl">
+              <OpenStreetMap lat={48.6439} lon={1.8308} cityName="Rambouillet" zoom={12} />
             </div>
           </div>
         </aside>
