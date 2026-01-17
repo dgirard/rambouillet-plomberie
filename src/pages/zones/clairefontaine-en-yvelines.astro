@@ -23,7 +23,7 @@ const breadcrumbs = [
 const services = [
   { icon: 'water', title: 'Recherche de Fuite', description: 'Détection précise sans casse grâce à nos caméras thermiques. Intervention rapide pour limiter les dégâts des eaux.' },
   { icon: 'plumbing', title: 'Débouchage WC & Canalisation', description: 'Canalisations bouchées ? Nous intervenons avec camion pompe haute pression si nécessaire. Résultat garanti.' },
-  { icon: 'heating', title: 'Chauffe-eau & Chaudière', description: 'Installation, entretien et dépannage de votre ballon d\'eau chaude. Remplacement de résistance et thermostat.' }
+  { icon: 'heating', title: 'Chauffe-eau', description: 'Installation, entretien et dépannage de votre ballon d\'eau chaude. Remplacement de résistance et thermostat.' }
 ];
 
 const trustBadges = [
@@ -50,7 +50,7 @@ const localSchema = {
   "@context": "https://schema.org",
   "@type": "Plumber",
   "name": "Plombier Clairefontaine-en-Yvelines",
-  "description": "Artisan plombier chauffagiste à Clairefontaine-en-Yvelines (78). Dépannage urgence 24/7, entretien chaudière, rénovation salle de bain.",
+  "description": "Artisan plombier plombier à Clairefontaine-en-Yvelines (78). Dépannage urgence 24/7, rénovation salle de bain.",
   "telephone": "+33627313870",
   "areaServed": { "@type": "City", "name": city.name, "postalCode": city.postalCode },
   "address": { "@type": "PostalAddress", "addressLocality": city.name, "postalCode": city.postalCode, "addressRegion": "Île-de-France", "addressCountry": "FR" }
@@ -131,7 +131,7 @@ const localSchema = {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Nos Interventions à Clairefontaine</h2>
-        <p class="text-gray-500 text-lg">Nous traitons toutes les urgences de plomberie et chauffage.</p>
+        <p class="text-gray-500 text-lg">Nous traitons toutes les urgences de plomberie.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service) => (

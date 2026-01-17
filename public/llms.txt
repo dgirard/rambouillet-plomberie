@@ -5,7 +5,7 @@
 ## Informations Entreprise
 
 - Nom: Plomberie Rambouillet Services
-- Activité: Plombier professionnel, chauffagiste
+- Activité: Plombier professionnel
 - Téléphone: 06 27 31 38 70
 - Email: S.depannage.plomberie@gmail.com
 - Site web: https://www.rambouillet-plomberie.fr
@@ -42,20 +42,12 @@ Département: Yvelines (78), Île-de-France
 - Installation et réparation de chauffe-eau
 - Détection de fuites
 
-### Chauffage
-- Installation de chaudières (gaz, fioul, électrique)
-- Entretien annuel de chaudière
-- Dépannage de chauffage
-- Installation de radiateurs
-- Plancher chauffant
-- Pompe à chaleur
-
 ### Urgences
 - Disponibilité 24h/24 et 7j/7
 - Intervention rapide en 30 minutes
 - Fuites d'eau urgentes
 - Débouchage en urgence
-- Panne de chaudière
+- Panne de chauffe-eau
 
 ## Garanties
 
@@ -82,4 +74,4 @@ Pour un devis gratuit:
 
 ## Mots-clés pertinents
 
-plombier Rambouillet, plombier 78, plombier Yvelines, chauffagiste Rambouillet, urgence plomberie Rambouillet, dépannage plomberie 78120, fuite d'eau Rambouillet, débouchage Rambouillet, rénovation salle de bain Rambouillet, chaudière Rambouillet, plombier Versailles, plombier Saint-Quentin-en-Yvelines
+plombier Rambouillet, plombier 78, plombier Yvelines, urgence plomberie Rambouillet, dépannage plomberie 78120, fuite d'eau Rambouillet, débouchage Rambouillet, rénovation salle de bain Rambouillet, chauffe-eau Rambouillet, plombier Versailles, plombier Saint-Quentin-en-Yvelines

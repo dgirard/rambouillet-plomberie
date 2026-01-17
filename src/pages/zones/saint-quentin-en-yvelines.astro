@@ -33,7 +33,7 @@ const services = [
   },
   {
     icon: 'heating',
-    title: 'Chauffe-eau & Chaudière',
+    title: 'Chauffe-eau',
     description: 'Installation, entretien et dépannage de votre ballon d\'eau chaude. Remplacement de résistance et thermostat.'
   }
 ];
@@ -75,7 +75,7 @@ const localSchema = {
   "@context": "https://schema.org",
   "@type": "Plumber",
   "name": "Plombier " + city.name,
-  "description": "Artisan plombier chauffagiste à " + city.name + " (78). Dépannage urgence 24/7, entretien chaudière, rénovation salle de bain.",
+  "description": "Artisan plombier plombier à " + city.name + " (78). Dépannage urgence 24/7, rénovation salle de bain.",
   "telephone": "+33627313870",
   "areaServed": {
     "@type": "City",
@@ -235,7 +235,7 @@ const localSchema = {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Nos Interventions à SQY</h2>
-        <p class="text-gray-500 text-lg">Nous traitons toutes les urgences de plomberie et chauffage, du simple joint à la rénovation complète.</p>
+        <p class="text-gray-500 text-lg">Nous traitons toutes les urgences de plomberie, du simple joint à la rénovation complète.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service) => (

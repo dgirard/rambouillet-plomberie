@@ -9,7 +9,6 @@ const breadcrumbs = [
 const categories = [
   { id: 'all', label: 'Toutes', active: true },
   { id: 'urgence', label: 'Urgences', active: false },
-  { id: 'chauffage', label: 'Chauffage', active: false },
   { id: 'plomberie', label: 'Plomberie', active: false },
   { id: 'renovation', label: 'Rénovation', active: false }
 ];
@@ -40,18 +39,6 @@ const realisations = [
     verified: true
   },
   {
-    slug: 'remplacement-chaudiere-gaz',
-    title: 'Remplacement Chaudière Gaz',
-    category: 'Chauffage',
-    categoryColor: 'bg-orange-600',
-    date: '10 Janvier 2024',
-    duration: 'Mise en service',
-    durationClass: 'text-gray-500',
-    location: 'Le Perray-en-Yvelines',
-    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&h=450&fit=crop',
-    verified: true
-  },
-  {
     slug: 'raccordement-cuisine-neuve',
     title: 'Raccordement Cuisine Neuve',
     category: 'Plomberie',
@@ -78,7 +65,7 @@ const realisations = [
   {
     slug: 'installation-chauffe-eau-thermodynamique',
     title: 'Installation Chauffe-eau Thermodynamique',
-    category: 'Chauffage',
+    category: 'Plomberie',
     categoryColor: 'bg-blue-600',
     date: '20 Novembre 2023',
     duration: 'Remplacement',
@@ -93,7 +80,7 @@ const portfolioSchema = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Réalisations Plomberie Rambouillet",
-  "description": "Découvrez nos réalisations en plomberie et chauffage à Rambouillet : urgences, rénovations salle de bain, installations de chaudières.",
+  "description": "Découvrez nos réalisations en plomberie à Rambouillet : urgences, rénovations salle de bain, installations sanitaires.",
   "isPartOf": {
     "@type": "WebSite",
     "@id": "https://www.rambouillet-plomberie.fr/#website"
@@ -102,8 +89,8 @@ const portfolioSchema = {
 ---
 
 <Layout
-  title="Nos Réalisations - Plomberie & Chauffage Rambouillet | Portfolio"
-  description="Découvrez nos réalisations en plomberie et chauffage à Rambouillet : urgences, rénovations salle de bain, installations chaudières. Photos avant/après."
+  title="Nos Réalisations - Plomberie Rambouillet | Portfolio"
+  description="Découvrez nos réalisations en plomberie à Rambouillet : urgences, rénovations salle de bain, installations sanitaires. Photos avant/après."
   schema={portfolioSchema}
 >
   <!-- Page Heading -->
