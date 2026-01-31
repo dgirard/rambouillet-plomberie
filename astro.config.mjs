@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://www.rambouillet-plomberie.fr',
+  site: 'https://www.sdepannageplomberie.com',
   output: 'static',
   integrations: [
     react(),
