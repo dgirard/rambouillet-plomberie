@@ -1,8 +1,7 @@
 # Robots.txt for Rambouillet Plomberie
-# Site en cours de développement - Indexation bloquée
 
 User-agent: *
-Disallow: /
+Allow: /
 
 # Sitemap
 Sitemap: https://www.rambouillet-plomberie.fr/sitemap-index.xml
